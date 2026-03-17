@@ -6,6 +6,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: 'practica-lab1-bloque-2',
   plugins: [
     vue(),
     vueDevTools(),
