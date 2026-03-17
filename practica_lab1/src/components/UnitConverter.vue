@@ -1,7 +1,7 @@
 <script setup>
 import { ref, computed, watch } from 'vue'
 
-// ── Categorías y unidades ─────────────────────────────────────────────
+// ── Categorías y unidades ──
 const categories = {
   longitud: {
     label: '📏 Longitud',
@@ -43,7 +43,7 @@ const result         = ref(null)
 
 const currentUnits = computed(() => categories[activeCategory.value].units)
 
-// Al cambiar categoría, resetear unidades y resultado
+
 watch(activeCategory, () => {
   const keys = Object.keys(currentUnits.value)
   fromUnit.value = keys[0]
@@ -52,7 +52,7 @@ watch(activeCategory, () => {
   result.value = null
 })
 
-// ── Conversión ────────────────────────────────────────────────────────
+// ── Conversión ────────────
 function convert() {
   const val = parseFloat(inputValue.value)
   if (isNaN(val)) { result.value = null; return }
